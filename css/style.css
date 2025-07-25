@@ -1,0 +1,382 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 32px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+    backdrop-filter: blur(10px);
+}
+
+h1 {
+    text-align: center;
+    color: #4c63d2;
+    margin-bottom: 12px;
+    font-size: 2.2em;
+    font-weight: 700;
+}
+
+.subtitle {
+    text-align: center;
+    color: #6c757d;
+    margin-bottom: 32px;
+    font-size: 1.1em;
+    background: linear-gradient(135deg, #e8f0fe, #f3e5f5);
+    padding: 12px 24px;
+    border-radius: 25px;
+    display: inline-block;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-align: center;
+}
+
+section {
+    margin-bottom: 32px;
+    border-radius: 16px;
+    padding: 24px;
+    background: linear-gradient(135deg, #f8f9ff, #f0f4ff);
+    border-left: 6px solid #4c63d2;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 24px rgba(76, 99, 210, 0.15);
+}
+
+section:nth-child(even) {
+    background: linear-gradient(135deg, #fff8e1, #fef7e0);
+    border-left-color: #ff9800;
+}
+
+section:nth-child(3n) {
+    background: linear-gradient(135deg, #e8f5e8, #f1f8e9);
+    border-left-color: #4caf50;
+}
+
+h2 {
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-size: 1.4em;
+    font-weight: 600;
+}
+
+h3 {
+    color: #4c63d2;
+    margin-top: 20px;
+    margin-bottom: 12px;
+    font-size: 1.1em;
+}
+
+code {
+    background: #2d3748;
+    color: #68d391;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+pre {
+    background: linear-gradient(135deg, #2d3748, #4a5568);
+    color: #e2e8f0;
+    padding: 16px 20px;
+    border-radius: 12px;
+    overflow-x: auto;
+    margin: 16px 0;
+    border: 1px solid #4a5568;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+}
+
+pre code {
+    background: transparent;
+    color: #68d391;
+    padding: 0;
+    font-weight: 400;
+}
+
+a {
+    color: #4c63d2;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #3730a3;
+    text-decoration: underline;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    margin: 16px 0;
+    padding: 12px 16px;
+    background: linear-gradient(135deg, #e8f5e8, #f0fff4);
+    border-radius: 10px;
+    border-left: 4px solid #4caf50;
+    transition: background 0.3s ease;
+}
+
+.checkbox:hover {
+    background: linear-gradient(135deg, #dcedc8, #e8f5e8);
+}
+
+.checkbox input[type="checkbox"] {
+    margin-right: 12px;
+    transform: scale(1.2);
+    accent-color: #4caf50;
+}
+
+.checkbox label {
+    cursor: pointer;
+    font-weight: 500;
+    color: #2e7d32;
+}
+
+.checklist {
+    background: linear-gradient(135deg, #f3e5f5, #faf5ff);
+    padding: 20px;
+    border-radius: 12px;
+    border: 2px solid #e1bee7;
+}
+
+.checklist li {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.checklist input[type="checkbox"] {
+    margin-right: 12px;
+    transform: scale(1.2);
+    accent-color: #9c27b0;
+}
+
+.checklist label {
+    cursor: pointer;
+    font-weight: 500;
+    color: #4a148c;
+    flex: 1;
+}
+
+ul, ol {
+    margin-left: 20px;
+}
+
+ul li, ol li {
+    margin-bottom: 8px;
+    position: relative;
+}
+
+ul li::marker {
+    color: #4c63d2;
+}
+
+ol li::marker {
+    color: #ff9800;
+    font-weight: bold;
+}
+
+strong {
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+em {
+    color: #6c757d;
+    font-style: italic;
+}
+
+.highlight {
+    background: linear-gradient(135deg, #fff3e0, #ffe8cc);
+    padding: 16px;
+    border-radius: 10px;
+    margin: 16px 0;
+    border-left: 4px solid #ff9800;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 20px;
+        border-radius: 15px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    section {
+        padding: 20px;
+    }
+}
+
+/* Animaciones sutiles */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+section:nth-child(2) { animation-delay: 0.1s; }
+section:nth-child(3) { animation-delay: 0.2s; }
+section:nth-child(4) { animation-delay: 0.3s; }
+section:nth-child(5) { animation-delay: 0.4s; }
+section:nth-child(6) { animation-delay: 0.5s; }
+section:nth-child(7) { animation-delay: 0.6s; }
+section:nth-child(8) { animation-delay: 0.7s; }
+/* Estilos para el mensaje de felicitación */
+.congratulations {
+    margin-top: 24px;
+    padding: 24px;
+    background: linear-gradient(135deg, #4caf50, #8bc34a);
+    border-radius: 16px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 8px 32px rgba(76, 175, 80, 0.3);
+    border: 3px solid #2e7d32;
+    transform: scale(0);
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    opacity: 0;
+}
+
+.congratulations.show {
+    transform: scale(1);
+    opacity: 1;
+    animation: bounce 0.6s ease-out 0.2s;
+}
+
+.congratulations.hidden {
+    display: none;
+}
+
+.congrats-content h3 {
+    color: white;
+    font-size: 1.8em;
+    margin: 0 0 16px 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.congrats-content p {
+    font-size: 1.1em;
+    margin: 12px 0;
+    font-weight: 500;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+.celebration-emojis {
+    margin-top: 20px;
+    font-size: 2em;
+}
+
+.celebration-emojis span {
+    display: inline-block;
+    margin: 0 8px;
+    animation: celebrate 2s ease-in-out infinite;
+    animation-delay: calc(var(--i) * 0.2s);
+}
+
+.celebration-emojis span:nth-child(1) { --i: 0; }
+.celebration-emojis span:nth-child(2) { --i: 1; }
+.celebration-emojis span:nth-child(3) { --i: 2; }
+.celebration-emojis span:nth-child(4) { --i: 3; }
+.celebration-emojis span:nth-child(5) { --i: 4; }
+.celebration-emojis span:nth-child(6) { --i: 5; }
+
+/* Confetti que cae desde arriba */
+.confetti-piece {
+    position: fixed;
+    top: -10vh;
+    font-size: 2em;
+    z-index: 1000;
+    pointer-events: none;
+    animation: confetti-fall linear forwards;
+}
+
+/* Animaciones */
+@keyframes bounce {
+    0%, 20%, 53%, 80%, 100% {
+        transform: scale(1) translateY(0);
+    }
+    40%, 43% {
+        transform: scale(1.1) translateY(-20px);
+    }
+    70% {
+        transform: scale(1.05) translateY(-10px);
+    }
+    90% {
+        transform: scale(1.02) translateY(-5px);
+    }
+}
+
+@keyframes celebrate {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg) scale(1);
+    }
+    25% {
+        transform: translateY(-10px) rotate(-5deg) scale(1.1);
+    }
+    50% {
+        transform: translateY(-15px) rotate(5deg) scale(1.2);
+    }
+    75% {
+        transform: translateY(-8px) rotate(-3deg) scale(1.1);
+    }
+}
+
+@keyframes confetti-fall {
+    0% {
+        transform: translateY(-10vh) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(110vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+/* Animación de pulso para la checklist cuando está completa */
+.checklist.completed {
+    animation: pulse-success 1s ease-in-out;
+    border-color: #4caf50;
+    box-shadow: 0 0 20px rgba(76, 175, 80, 0.3);
+}
+
+@keyframes pulse-success {
+    0% {
+        box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(76, 175, 80, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(76, 175, 80, 0);
+    }
+}
